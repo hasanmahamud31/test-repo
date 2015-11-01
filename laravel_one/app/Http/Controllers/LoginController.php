@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use Input;
+use Validator;
 class LoginController extends Controller
 {
     /**
@@ -16,7 +17,20 @@ class LoginController extends Controller
      */
     public function index()
     {
-        //
+     
+//       echo '<pre>';
+//       print_r(Input::all()) ;
+       $rules = array(
+           'admin_email' => 'required|email|unique:admins',
+           'password'=> 'required|min:6');
+       $validator = Validator::make(Input::all(), $rules);
+       if($validator->fails())
+       {
+           return Redirect::to('login-submit')->withErrors($validator)->withInput('admin_email');
+       }
+       else{
+           return view('admin.main.master');
+       }
     }
 
     /**
@@ -26,7 +40,7 @@ class LoginController extends Controller
      */
     public function create()
     {
-        //
+         return view('admin.pages.login');
     }
 
     /**

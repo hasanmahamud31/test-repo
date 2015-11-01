@@ -5,14 +5,19 @@
 
         <div class="form-box" id="login-box">
             <div class="header">Sign In</div>
-            <form action="login" method="post">
+            
+            <form action="{{URL::route('login-submit')}}" method="post">
                 <div class="body bg-gray">
+                    @foreach($errors->all('<li>:message</li>') as $message){
+                       echo $message; 
+                   }
+                    @endforeach
                     <div class="form-group">
-                        <input type="text" name="admin_email" class="form-control" placeholder="Email ID"/>
+                        <input type="email" name="admin_email" class="form-control" required placeholder="Email ID"/>
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     </div>
                     <div class="form-group">
-                        <input type="password" name="password" class="form-control" placeholder="Password"/>
+                        <input type="password" name="password" class="form-control" placeholder="Password" required/>
                     </div>          
                     <div class="form-group">
                         <input type="checkbox" name="remember_me"/> Remember me

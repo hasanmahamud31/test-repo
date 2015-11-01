@@ -15,10 +15,12 @@
 Route::get('/admin', function () {
     return view('admin.pages.home');
 });
-Route::get('/login', function () {
-    return view('admin.pages.login');
+Route::get('/login', ['as' => 'login', 'uses' => 'LoginController@create']);
+
+Route::group(['before' => 'csrf'], function() {
+
+    Route::post('/login', ['as' => 'login-submit', 'uses' => 'LoginController@index']);
 });
-Route::post('/login','LoginController@index');
 
 //Route::group(['as' => 'admin::'], function () {
 //    Route::get('home', ['as' => 'home'], function () {
