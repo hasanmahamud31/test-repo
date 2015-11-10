@@ -14,7 +14,8 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        // $this->call(UserTableSeeder::class);
+        $this->call('AdminAppSeeder');
+        $this->command->info('admin app seeds finished');
 
         Model::reguard();
     }

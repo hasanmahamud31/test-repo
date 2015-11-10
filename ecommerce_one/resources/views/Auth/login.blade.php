@@ -8,7 +8,7 @@
         <div class="form-box" id="login-box">
             <div class="header">Sign In</div>
 
-            <form action="{{URL::to('auth/login')}}" method="post">
+            <form action="{{URL::to('/admin')}}" method="post">
                 <div class="body bg-gray">
                     @if (count($errors) > 0)
                     <!-- Form Error List -->

@@ -4,7 +4,7 @@
         <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                <img src="{{URL::to('admin_resource/img/avatar3.png')}}" class="img-circle" alt="User Image" />
             </div>
             <div class="pull-left info">
                 <p>Hello, Jane</p>
@@ -25,13 +25,33 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
             <li class="active">
-                <a href="{{URL::to('/deshboard')}}">
+                <a href="{{URL::to('/dashboard')}}">
                     <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                 </a>
             </li>
             <li>
-                <a href="{{URl::to('/access_control_manage')}}">
+                <a href="{{route('manage_admin')}}">
                     <i class="fa fa-th"></i> <span>Manage Admin</span> <small class="badge pull-right bg-green">new</small>
+                </a>
+            </li>
+            <li>
+                <a href="{{URl::to('/staff_manage')}}">
+                    <i class="fa fa-th"></i> <span>Manage Staff</span> <small class="badge pull-right bg-green">new</small>
+                </a>
+            </li>
+            <li>
+                <a href="{{URl::to('/reseller_manage')}}">
+                    <i class="fa fa-th"></i> <span>Manage Reseller</span> <small class="badge pull-right bg-green">new</small>
+                </a>
+            </li>
+            <li>
+                <a href="{{route('user_manage')}}">
+                    <i class="fa fa-th"></i> <span>Manage User</span> <small class="badge pull-right bg-green">new</small>
+                </a>
+            </li>
+            <li>
+                <a href="{{route('category_view')}}">
+                    <i class="fa fa-th"></i> <span>Manage Category</span> <small class="badge pull-right bg-green">4</small>
                 </a>
             </li>
             <li class="treeview">

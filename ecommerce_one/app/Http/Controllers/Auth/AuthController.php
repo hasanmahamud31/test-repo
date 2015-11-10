@@ -28,7 +28,7 @@ use AuthenticatesAndRegistersUsers,
      *
      * @return void
      */
-    protected $redirectPath='/deshboard';
+    protected $redirectPath='/dashboard';
     protected $loginPath='/admin';
     public function __construct() {
         $this->middleware('guest', ['except' => 'getLogout']);
@@ -45,7 +45,7 @@ use AuthenticatesAndRegistersUsers,
                     'name' => 'required|max:255',
                     'email' => 'required|max:255|unique:users',
                     'password' => 'required|confirmed|min:6',
-                    'phone_no' => 'required|max:15|unique:users',
+                    
         ]);
     }
 
@@ -63,11 +63,8 @@ use AuthenticatesAndRegistersUsers,
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-            'phone_no' => $data['phone_no'],
-            'present_address' => $data['present_address'],
-            'permanent_address' => $data['permanent_address'],
-            'admin_access_level' => $data['admin_access_level'],
+            'password' => bcrypt($data['password']),          
+            'admin_access_level' =>12,
             
         ]);
     }

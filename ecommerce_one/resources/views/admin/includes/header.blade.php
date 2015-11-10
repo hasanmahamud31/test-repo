@@ -28,7 +28,7 @@
                                 <li><!-- start message -->
                                     <a href="#">
                                         <div class="pull-left">
-                                            <img src="{{URL::to('../admin_resource/img/avatar3.png')}}" class="img-circle" alt="User Image"/>
+                                            <img src="{{URL::to('admin_resource/img/avatar3.png')}}" class="img-circle" alt="User Image"/>
                                         </div>
                                         <h4>
                                             Support Team
@@ -40,7 +40,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="pull-left">
-                                            <img src="{{URL::to('../admin_resource/img/avatar3.png')}}" class="img-circle" alt="user image"/>
+                                            <img src="{{URL::to('admin_resource/img/avatar3.png')}}" class="img-circle" alt="user image"/>
                                         </div>
                                         <h4>
                                             AdminLTE Design Team
@@ -52,7 +52,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="pull-left">
-                                            <img src="{{URL::to('../admin_resource/img/avatar3.png')}}" class="img-circle" alt="user image"/>
+                                            <img src="{{URL::to('admin_resource/img/avatar3.png')}}" class="img-circle" alt="user image"/>
                                         </div>
                                         <h4>
                                             Developers
@@ -64,7 +64,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="pull-left">
-                                            <img src="{{URL::to('../admin_resource/img/avatar3.png')}}" class="img-circle" alt="user image"/>
+                                            <img src="{{URL::to('admin_resource/img/avatar3.png')}}" class="img-circle" alt="user image"/>
                                         </div>
                                         <h4>
                                             Sales Department
@@ -76,7 +76,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="pull-left">
-                                            <img src="{{URL::to('../admin_resource/img/avatar3.png')}}" class="img-circle" alt="user image"/>
+                                            <img src="{{URL::to('admin_resource/img/avatar3.png')}}" class="img-circle" alt="user image"/>
                                         </div>
                                         <h4>
                                             Reviewers
@@ -211,7 +211,7 @@
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header bg-light-blue">
-                            <img src="{{URL::to('../admin_resource/img/avatar3.png')}}" class="img-circle" alt="User Image" />
+                            <img src="{{URL::to('admin_resource/img/avatar3.png')}}" class="img-circle" alt="User Image" />
                             <p>
                                 Jane Doe - Web Developer
                                 <small>Member since Nov. 2012</small>
@@ -235,7 +235,7 @@
                                 <a href="#" class="btn btn-default btn-flat">Profile</a>
                             </div>
                             <div class="pull-right">
-                                <a href="{{URL::to('auth/logout')}}" class="btn btn-default btn-flat">Sign out</a>
+                                <a href="{{URL::to('logout')}}" class="btn btn-default btn-flat">Sign out</a>
                             </div>
                         </li>
                     </ul>
